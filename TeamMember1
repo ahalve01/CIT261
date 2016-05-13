@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JSON Example: Object From String</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <!--<p id="show_schedule"></p>-->
+            <p id="show_schedule"></p>
+            <script>
+                var schedule = '{ "lessonsched" : [' +
+                        '{"subject" : "The software development process and some standard methodologies", "student" : "Katy"},' +
+                        '{"subject" : "Creative, pleasant, mobile user interface creation", "student" : "Kevin"},' +
+                        '{"subject" : "JavaScript objects", "student" : "Meghan"},' +
+                        '{"subject" : "DOM manipulation", "student" : "Tyler"},' +
+                        '{"subject" : "CSS3 transitions", "student" : "Adam"},' +
+                        '{"subject" : "CSS3 animations", "student" : "Katy"},' +
+                        '{"subject" : "Using local data storage", "student" : "Katy"},' +
+                        '{"subject" : "AJAX interactions with remote services", "student" : "Silvere"},' +
+                        '{"subject" : "JSON data serialization", "student": "James"} ] }';
+                var obj = JSON.parse(schedule);
+                document.getElementById("show_schedule").innerHTML = obj.lessonsched[4]["student"] + ": " +obj.lessonsched[2]["subject"];
+                //function loopArray(array) {
+                //    var output = "";
+                //    var i;
+                //    for (i = 0; i < array.length; i++) {
+                //        output +=  array[i].subject ;
+                 //   }                   
+                //    return output;
+                    //document.getElementById("show_schedule").innerHTML = out;
+                //}
+                
+                //var output = loopArray(schedule);
+                
+                //document.getElementById("show_schedule").innerHTML = output;
+            </script>
+        </div>
+    </body>
+</html>
