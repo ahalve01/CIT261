@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> Portfolio | Local Data Storage </title>
+        <meta charset="UTF-8">
+        <meta name="author" content ="Katy Browning">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/sandboxcss.css" type="text/css" rel="stylesheet"/>
+        <link href="/normalize.css.css" type="text/css" rel="stylesheet"/>
+    </head>
+   <body>
+        <header>
+
+        </header>
+        <nav>
+            <?php include $_SERVER['DOCUMENT_ROOT'] . '/module/navigation.php' ?>  
+
+        </nav>
+        <main>
+
+            <article>
+                <h1>Local Data Storage</h1>
+<div class="hits">
+      <script type="text/javascript">
+         if( localStorage.hits ){
+            localStorage.hits = Number(localStorage.hits) +1;
+         }
+         
+         else{
+            localStorage.hits = 1;
+         }
+         document.write("Total Hits :" + localStorage.hits );
+      </script>
+</div>
+		
+      <p>Refresh the page to increase number of hits.</p>
+      <p>Close the window and open it again and check the result.</p>
+        </article>
+            <footer>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/module/footer.php' ?> 
+            </footer> 
+        </main>
+
+   </body>
+</html>

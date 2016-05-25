@@ -1,0 +1,71 @@
+<html>
+<head>
+
+  
+
+
+  <style type="text/css">
+    body {
+  background: #D2D2D2;
+}
+h1 {
+  margin: 1rem 0 1rem 3rem;
+  text-transform: uppercase;
+  font-family: 'Helvetica';
+  color: #292929;
+}
+div {
+  width: 35rem;
+  height: 8rem;
+  line-height: 4;
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  margin: 2rem auto;
+  cursor: pointer;
+  border: 2px solid #292929;
+}
+.good {
+  background: #185901;
+}
+.bad {
+  background: #980101;
+  color: #FFF;
+}
+  </style>
+
+
+
+<script type="text/javascript">//<![CDATA[
+window.onload=function(){
+// First we detect the click event
+document.getElementById('the-box').addEventListener('click', function () {
+  // Using an if statement to check the class
+  if (this.classList.contains('bad')) {
+    // The box that we clicked has a class of bad so let's remove it and add the good class
+   this.classList.remove('bad');
+   this.classList.add('good');
+  } else {
+    // The user obviously can't follow instructions so let's alert them of what is supposed to happen next
+    alert("You can proceed!");
+  }
+});
+}//]]> 
+</script>
+
+  
+</head>
+
+<body>
+  <h1>Click the box once to proceed</h1>
+<div id="the-box" class="bad">The box</div>
+  
+
+
+
+
+</body></html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>DOM-Self</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 id="first">Learning!</h1>
+        <p id="second">Sample text to see</p>
+        <p id="third">Going to change me!</p>
+        
+        <input type="button" value="Click" onClick="change()"/>
+        
+        <script type="text/javascript">
+       /**
+ * Comment
+ */
+function change() {
+    var b = prompt("Type Here", 0);
+    var a = document.getElementById("third").innerHTML = b;
+}
+            
+        </script>
+    </body>
+</html>
